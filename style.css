@@ -14,7 +14,7 @@ body {
     background-repeat: repeat;
     background-size: auto;
     height: 100%;
-    min-height: 400px;
+    min-height: 500px;
     align-items: center;
     justify-items: center;
     font-family: "headstone", "Courier New", monospace;
@@ -23,9 +23,10 @@ body {
 .container {
     position: relative;
     height: 95vh;
-    min-height: 380px;
-    width: 94%;
-    min-width: 900px;
+    min-height: 450px;
+    width: 210vh;
+    min-width: 1100px;
+    max-width: 1800px;
     margin: 0 2% 0 auto;
     border: solid 10px black;
     border-radius: 10px;
@@ -74,11 +75,12 @@ body {
 
 .cloud1 img {
     height: 25vh;
+    min-height: 150px;
 }
 
 .cloud2 {
     position: absolute;
-    right: 17%;
+    right: 32%;
     top: 35%;
     z-index: 0;
     height: 20%;
@@ -86,6 +88,7 @@ body {
 
 .cloud2 img {
     height: 19vh;
+    min-height: 120px;
 }
 
 .hillleft {
@@ -107,6 +110,8 @@ body {
     position: absolute;
     left: 38%;
     top: 30%;
+    width: 120px;
+    height: 120px;
 }
 
 .sun, .sun-blink {
@@ -117,18 +122,17 @@ body {
 
 .sun-caption {
     position: absolute;
-    left: 11vh;
-    width: 11vh;
+    left: 14vh;
+    width: 200px;
     z-index: 9;
     display: none;
     pointer-events: none;
-    font-size: 3vh;
+    font-size: 5vh;
 }
 
 .sun img, .sun-blink img {
-    height: 20vh;
-    min-height: 50px;
-    max-height: 150px;
+    height: 18vh;
+    min-height: 120px;
 }
 
 .sun-blink img {
@@ -141,7 +145,7 @@ body {
 
 .flowers {
     position: absolute;
-    left: 30%;
+    left: 20%;
     bottom: 17%;
     z-index: 5;
 }
@@ -154,9 +158,9 @@ body {
 
 .house-wrapper {
     position: absolute;
-    left: 5%;
-    bottom: 16%;
-    height: 30vh;
+    left: 2%;
+    bottom: 20%;
+    height: 30opx;
     min-height: 200px;
     z-index: 4;
 }
@@ -168,8 +172,8 @@ body {
 }
 
 .house img, .house_open img {
-    height: 25vh;
-    min-height: 150px;
+    height: 20vh;
+    min-height: 160px;
 }
 
 .house_open img {
@@ -182,12 +186,11 @@ body {
 
 .dovecot-wrapper {
     position: absolute;
-    bottom: 40%;
-    width: 150px;
-    height: 150px;
-    right: 45%;
+    bottom: 16%;
+    width: 250px;
+    height: 300px;
+    right: 10%;
     z-index: 4;
-    border: dashed 3px blue;
 }
 
 .dovecot-main, .dovecot-hover {
@@ -197,31 +200,40 @@ body {
 }
 
 .dovecot-text {
-
+    position: absolute;
+    bottom: 16%;
+    height: 300px;
+    width: 250px;
+    right: 17%;
 }
 
 .dovecot-caption {
     position: absolute;
-    bottom: 40%;
-    height: 150px;
-    width: 150px;
-    right: 45%;
+    left: 0;
+    top: 0;
     z-index: 9;
-    border: dashed 5px red;
-    display: block;
-    pointer-events: none;
+    display: none;
     font-size: 40px;
+    text-align: right;
 }
 
 .dovecot-main img, .dovecot-hover img {
     height: 35vh;
-    min-height: 350px;
+    min-height: 320px;
+}
+
+.dovecot-wrapper:hover .dovecot-main img {
+    display: none;
 }
 
 .dovecot-hover img {
     display: none;   
 }
-.dovecot-wrapper:hover .dovecot-hover img, .dovecot-wrapper:hover .dovecot-caption {
+.dovecot-wrapper:hover .dovecot-hover img {
+    display: block;
+}
+
+.dovecot-wrapper:hover + .dovecot-text .dovecot-caption {
     display: block;
 }
 
