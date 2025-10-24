@@ -1,0 +1,40 @@
+@font-face {
+  font-family: headstone;
+  src: url(../fonts/Headstone\ DEMO.ttf)
+}
+
+@font-face {
+  font-family: headstone_itallics;
+  src: url(./fonts/Headstone\ Italic\ DEMO.ttf)
+}
+
+body {
+    background-image: url(../images/background.png);
+    align-items: center;
+    justify-items: center;
+    font-family: "headstone", "Courier New", monospace;
+}
+
+.page-wrapper {
+    width: 88%;
+    margin: 5% 6%;
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(235, 233, 228);
+  display: flex;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
