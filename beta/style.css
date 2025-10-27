@@ -16,9 +16,11 @@ body {
 }
 
 .page-wrapper {
-    width: 88%;
-    height: 90vh;
-    margin: 5% 6%;
+    width: 90%;
+    height: 94vh;
+    margin: 3% 5%;
+    background-color: hsla(0 100% 100% / 0.3);
+    border-radius: 15px;
     border: dotted blue 1px;
     overflow: hidden;
 }
@@ -29,12 +31,33 @@ body {
   padding: 20px;
 }
 
+.topnav {
+  display: flex;
+  height: 50px;
+  justify-items: center;
+  background-color: lightgrey;
+  column-gap: 20%;
+}
+
+.topnav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  color: black;
+}
+
+.topnav a:hover {
+  background: lightgrey;
+  border: white solid 1px;  
+}
+
 .image-container {
-  height: 300px;
+  height: 500px;
   position: relative;
   float: right;
   margin: 15px;
-  width: 300px;
+  width: 500px;
 }
 
 .image-still {
