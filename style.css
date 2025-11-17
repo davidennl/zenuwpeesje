@@ -37,7 +37,7 @@ body {
 
 .cloud1 {
     position: absolute;
-    left: 18%;
+    left: 5%;
     top: 20%;
     z-index: 0;
     height: 20%;
@@ -50,15 +50,15 @@ body {
 
 .cloud2 {
     position: absolute;
-    right: 32%;
+    right: 12%;
     top: 35%;
     z-index: 0;
     height: 20%;
 }
 
 .cloud2 img {
-    height: 19vh;
-    min-height: 120px;
+    height: 24vh;
+    min-height: 150px;
 }
 
 .container {
@@ -84,6 +84,10 @@ body {
     display: none;
     font-size: 40px;
     text-align: right;
+    background-image: url(./images/background.png);
+    border: black dashed 3px;
+    align-content: center;
+    text-align: center;
 }
 
 .dovecot-hover img {
@@ -107,7 +111,6 @@ body {
     height: 300px;
     width: 250px;
     right: 17%;
-    font-size: 15px;
 }
 
 .dovecot-wrapper {
@@ -132,6 +135,7 @@ body {
 .dovecot-wrapper:hover + .dovecot-text .dovecot-caption,
 .dovecot-wrapper:focus-within + .dovecot-text .dovecot-caption {
     display: block;
+    z-index: 8;
 }
 
 .floor {
@@ -152,14 +156,12 @@ body {
 .flowers {
     position: absolute;
     left: 20%;
-    bottom: 17%;
+    bottom: 15%;
     z-index: 5;
 }
 
 .flowers img {
-    height: 15vh;
-    min-height: 120px;
-    max-height: 300px;
+    height: 175px;
 }
 
 .garden {
@@ -183,7 +185,7 @@ body {
     left: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    z-index: 2;
+    z-index: 1;
 }
 
 .hillright {
@@ -209,11 +211,13 @@ body {
 
 .house-caption {
     position: absolute;
-    left: 200px;
-    bottom: 0;
-    width: 200px;
     display: none;
     font-size: 40px;
+    width: 150px;
+    background-image: url(./images/background.png);
+    border: black dashed 3px;
+    align-content: center;
+    text-align: center;
 }
 
 .house img, .house_open img {
@@ -222,18 +226,18 @@ body {
 
 .house-text {
     position: absolute;
-    left: 2%;
-    bottom: 20%;
-    height: 30opx;
-    min-height: 200px;
+    width: 50px;
+    height: 50px;
     z-index: 9;
+    left: 53%;
+    top: 50%;
 }
 
 .house-wrapper {
     position: absolute;
-    left: 2%;
+    left: 40%;
     bottom: 20%;
-    height: 30opx;
+    height: 30px;
     min-height: 200px;
     z-index: 4;
 }
@@ -277,16 +281,25 @@ body {
 .sun-caption {
     position: absolute;
     left: 55%;
-    width: 200px;
+    width: 180px;
     z-index: 9;
     display: none;
     pointer-events: none;
     font-size: 40px;
+    background-image: url(./images/background.png);
+    border: black dashed 3px;
+    align-content: center;
+    text-align: center;
+}
+
+
+.sun-text {
+ border: none;
 }
 
 .sun-wrapper {
     position: absolute;
-    left: 38%;
+    left: 18%;
     top: 30%;
     width: 120px;
     height: 120px;
@@ -299,8 +312,24 @@ body {
     display: block;
 }
 
+.trees {
+    position: absolute;
+    right: 25%;
+    bottom: 18%;
+    z-index: 3;
+    display: none;
+}
+
+.trees img {
+    height: 500px;
+}
+
 @media screen and (max-height: 950px) {
     .garden {
         bottom: 17%;
     }
+    .sun-caption {
+        left: 52%
+    }
 }
+
