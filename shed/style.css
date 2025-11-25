@@ -22,33 +22,142 @@
             color: #2c2416;
             line-height: 1.6;
         }
-
+        
         .pagesplit {
             display: flex;
             text-align: center;
             justify-content: center;
-            flex-direction: column;
-            width: 40%;
-            gap: 30px;
-            margin: 2% auto 2% auto;
-            margin-top: 2%;
+            flex-direction: row;
+            width: 90%;
+            gap: 5%;
+            margin: 4% auto 4% auto;
+            align-items: flex-start;
+        }
+
+        .framework {
+            position: sticky;
+            border:  6px solid #eabb2d;
+            top: 4%;
+            flex: 1;
+            height: 88vh;
+            background-image: url(../images/background.png);
+            overflow: hidden;
+        }
+
+        .floor {
+            position: absolute;
+            top: 68%;
+            z-index: 0;
+        }
+
+        .desk {
+            position: absolute;
+            bottom: 14%;
+            right: 5%;
+            z-index: 8;
+        }
+
+        .desk img {
+            height: 50vh;
+            min-height: 180px;
+        }
+
+        .desk:hover img {
+            transform: rotate(-2deg)
+        }
+
+        .floor img {
+            width: 100%;
+        }
+        
+        .chair, .chair-blink {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .chair img, .chair-blink img {
+            height: 40vh;
+            min-height: 250px;
+        }
+
+        .chair-blink img {
+            display: none;
+        }
+
+        .chair-wrapper {
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            width: 40vh;
+            height: 40vh;
+            z-index: 8;
+        }
+
+        .chair-wrapper:hover .chair-blink img, .chair-wrapper:focus-within .chair-blink img {
+            display: block
+        }
+
+        .chair-wrapper:hover .chair img, .chair-wrapper:focus-within .chair img {
+            display: none
+        }
+
+        .portrait {
+        position: absolute;
+        left: 0;
+        top: 0;
+        }
+
+        .portrait img {
+            height: 38vh;
+            min-height: 220px;
+        }
+
+        .portrait:hover img {
+            transform: rotate(-2deg)
+        }
+
+        .portrait-caption {
+            position: absolute;
+            left: 70%;
+            width: 180px;
+            z-index: 9;
+            display: none;
+            pointer-events: none;
+            font-size: 34px;
+            background-image: url(../images/background.png);
+            border: dotted #eabb2d 3px;
+            color: black;
+            align-content: center;
+            text-align: center;
+            font-family: 'headstone_itallics';
+        }
+
+
+        .portrait-text {
+        border: none;
+        }
+
+        .portrait-wrapper {
+            position: absolute;
+            left: 10%;
+            top: 5%;
+            width: 120px;
+            height: 120px;
+        }
+
+        .portrait-wrapper:hover .portrait-caption,
+        .portrait-wrapper:focus-within .portrait-caption {
+            display: block;
         }
 
         .feed {
             display: flex;
+            flex-direction: column;
             height: fit-content;
-            overflow-y: auto;          
-        }
-
-        .sticky {
-            background-image: url(../images/background.png);
-            position: sticky;
-            left: 0;
-            top: 2%;
-            height: 10vh;
-            min-height: 100px;
-            width: 100%;
-            border: solid 6px #b23e28
+            overflow-y: auto;   
+            flex: 1;
+            min-width: 50%;       
         }
 
         .post {
@@ -73,10 +182,10 @@
 
         .post-title-wrapper {
             display: flex;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
             gap: 0.5rem;
             margin-bottom: 2%;
-            text-align: center;
         }
 
         .post-title {
@@ -113,66 +222,58 @@
             padding: 0.3rem 0.8rem;
             font-size: 0.85rem;
             border-radius: 3px;
-            border: 1px solid #d4c5a9;
+            border: 1px solid #b23e28;
         }
 
-
-        .sofa, .sofa-blink {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        .sofa img, .sofa-blink img {
-            height: 40vh;
-            min-height: 250px;
-        }
-
-        .sofa-blink img {
-            display: none;
-        }
-
-        .sofa-wrapper {
-            position: absolute;
-            left: 5%;
-            bottom: 10%;
-            width: 40vh;
-            height: 40vh;
-        }
-
-        .sofa-wrapper:hover .sofa-blink img, .sofa-wrapper:focus-within .sofa-blink img {
-            display: block
-        }
-
-        .sofa-wrapper:hover .sofa img, .sofa-wrapper:focus-within .sofa img {
-            display: none
-        }
-
-        @media (max-width: 768px) {
+        @media (max-width: 1050px) {
 
             body {
                 background-size: 300px;
             }
             
-            .sticky {
-                position: relative;
-                height: 400px;
-            }
-
-            .sofa-wrapper {
-                left: 20px;
-                bottom: -150px;
+            .framework {
+                min-height: 450px;
                 width: 100%;
-                height: 400px;
+                position: relative;
+                display: block;
             }
 
-            .sofa img, .sofa-blink img {
-                height: 220px;
-                min-height: 220px;
+            .floor img {
+                width: 100%;
+            }
+            
+            .portrait img {
+            height: 28vh;
+            min-height: 140px;
+            }
+
+            .portrait-caption {
+            left: 55%;
+            font-size: 25px;
+            max-width: 120px;
+            }
+
+            .desk img {
+                height: 25vh;
+                min-height: 120px;
+            }
+
+            .chair-wrapper {
+                width: 25vh;
+                height: 25vh;
+                min-height: 140px;
+                bottom: 10%;
+            }
+        
+            .chair img, .chair-blink img {
+                height: 30vh;
+                min-height: 140px;
             }
 
             .pagesplit {
                 width: 80%;
+                flex-direction: column;
+                gap: 50px;
             }
 
             .post-content {
