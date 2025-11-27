@@ -1,11 +1,21 @@
 @font-face {
-  font-family: headstone;
-  src: url(./fonts/Headstone\ DEMO.ttf)
+  font-family: 'title';
+  src: url(./fonts/Tagesschrift-Regular.ttf)
 }
 
 @font-face {
-  font-family: headstone_itallics;
-  src: url(./fonts/Headstone\ Italic\ DEMO.ttf)
+  font-family: 'initial';
+  src: url(./fonts/capo_verso.ttf)
+}
+
+@font-face {
+  font-family: 'text';
+  src: url(./fonts/IMFellDWPica-Regular.ttf)
+}
+
+@font-face {
+  font-family: 'itallics';
+  src: url(./fonts/IMFellDWPica-Italic.ttf)
 }
 
 .arches {
@@ -32,7 +42,18 @@ body {
     min-height: 500px;
     align-items: center;
     justify-items: center;
-    font-family: "headstone", "Courier New", monospace;
+    font-family: 'itallics';
+    font-size: 30px;
+}
+
+.caption {
+    background-image: url(./images/background.png);
+    border: #eabb2d solid 3px;
+    align-content: center;
+    text-align: center;
+    padding: 11px;
+    line-height: 1.3;
+
 }
 
 .cloud1 {
@@ -82,12 +103,6 @@ body {
     top: 0;
     z-index: 9;
     display: none;
-    font-size: 40px;
-    text-align: right;
-    background-image: url(./images/background.png);
-    border: black dashed 3px;
-    align-content: center;
-    text-align: center;
 }
 
 .dovecot-hover img {
@@ -107,16 +122,16 @@ body {
 
 .dovecot-text {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     height: 300px;
-    width: 250px;
+    width: 150px;
     right: 17%;
     padding: 10px;
 }
 
 .dovecot-wrapper {
     position: absolute;
-    bottom: 20%;
+    bottom: 18%;
     width: 250px;
     height: 300px;
     right: 10%;
@@ -213,13 +228,7 @@ body {
 .house-caption {
     position: absolute;
     display: none;
-    font-size: 40px;
     width: 150px;
-    background-image: url(./images/background.png);
-    border: black dashed 3px;
-    align-content: center;
-    text-align: center;
-    padding: 10px;
 }
 
 .house img, .house_open img {
@@ -232,8 +241,8 @@ body {
     width: 50px;
     height: 50px;
     z-index: 9;
-    left: 18%;
-    top: 30%;
+    left: 10%;
+    bottom: 60%;
 }
 
 .house-wrapper {
@@ -287,15 +296,7 @@ body {
     width: 180px;
     z-index: 9;
     display: none;
-    pointer-events: none;
-    font-size: 40px;
-    background-image: url(./images/background.png);
-    border: black dashed 3px;
-    align-content: center;
-    text-align: center;
-    padding: 10px;
 }
-
 
 .sun-text {
  border: none;
@@ -325,7 +326,7 @@ body {
 }
 
 .trees img {
-    height: 400px;
+    height: 300px;
 }
 
 @media screen and (max-height: 950px) {
