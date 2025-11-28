@@ -1,3 +1,4 @@
+/* Font Faces */
 @font-face {
   font-family: 'title';
   src: url(./fonts/Tagesschrift-Regular.ttf)
@@ -18,16 +19,50 @@
   src: url(./fonts/IMFellDWPica-Italic.ttf)
 }
 
+/* Body */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    align-items: center;
+    background-image: url("/images/background.png");
+    background-repeat: repeat;
+    background-size: auto;
+    font-family: 'itallics';
+    font-size: 30px;
+    height: 100%;
+    justify-items: center;
+    min-height: 500px;
+}
+
+/* Container */
+.container {
+    position: relative;
+    border: solid 10px black;
+    border-radius: 10px;
+    height: 94vh;
+    margin: auto;
+    max-width: 1800px;
+    min-height: 600px;
+    min-width: 1100px;
+    overflow: hidden;
+    width: 94vw;
+    z-index: 100;
+}
+
+/* Arches */
 .arches {
     position: absolute;
     align-items: center;
     bottom: 10%;
-    max-width: 100%;
     height: 900px;
+    max-width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
-    z-index: 8;
     pointer-events: none;
+    z-index: 8;
 }
 
 .arches img {
@@ -35,106 +70,92 @@
     max-height: 150%;
 }
 
-body {
-    background-image: url("/images/background.png");
-    background-repeat: repeat;
-    background-size: auto;
-    height: 100%;
-    min-height: 500px;
-    align-items: center;
-    justify-items: center;
-    font-family: 'itallics';
-    font-size: 30px;
-}
-
+/* Caption */
 .caption {
+    align-content: center;
     background-image: url(./images/background.png);
     border: #eabb2d solid 3px;
-    align-content: center;
-    text-align: center;
-    padding: 11px;
     line-height: 1.3;
+    padding: 12px;
+    text-align: center;
+    font-size: 1em;
 }
 
-.cloud1 {
+/* Clouds */
+.cloud-1 {
     position: absolute;
     left: 5%;
     top: 20%;
-    z-index: 0;
     height: 20%;
+    z-index: 0;
 }
 
-.cloud1 img {
+.cloud-1 img {
     height: 25vh;
     min-height: 150px;
 }
 
-.cloud2 {
+.cloud-2 {
     position: absolute;
     right: 8%;
     top: 28%;
-    z-index: 0;
     height: 20%;
+    z-index: 0;
 }
 
-.cloud2 img {
+.cloud-2 img {
     height: 24vh;
     min-height: 150px;
 }
 
-.container {
-    position: relative;
-    height: 94vh;
-    min-height: 600px;
-    width: 94vw;
-    min-width: 1100px;
-    max-width: 1800px;
-    margin: auto;
-    border: solid 10px black;
-    border-radius: 10px;
-    z-index: 100;
-    overflow: hidden;
+/* Dovecot */
+.dovecot-wrapper {
+    position: absolute;
+    right: 10%;
+    bottom: 18%;
+    height: 300px;
+    width: 250px;
+    z-index: 9;
+}
+
+.dovecot-still {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.dovecot-still img {
+    height: 50vh;
+    min-height: 450px;
+}
+
+.dovecot-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.dovecot-hover img {
+    display: none;
+    height: 50vh;
+    min-height: 450px;
 }
 
 .dovecot-caption {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 9;
     display: none;
-}
-
-.dovecot-hover img {
-    display: none;   
-}
-
-.dovecot-main, .dovecot-hover {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.dovecot-main img, .dovecot-hover img {
-    height: 50vh;
-    min-height: 450px;
+    z-index: 9;
 }
 
 .dovecot-text {
     position: absolute;
+    right: 250px;
     bottom: 4%;
     height: 300px;
-    width: 150px;
-    right: 250px;
     padding: 10px;
-}
-
-.dovecot-wrapper {
-    position: absolute;
-    bottom: 18%;
-    width: 250px;
-    height: 300px;
-    right: 10%;
-    z-index: 9;
+    width: 150px;
 }
 
 .dovecot-wrapper:hover .dovecot-hover img,
@@ -142,8 +163,8 @@ body {
     display: block;
 }
 
-.dovecot-wrapper:hover .dovecot-main img,
-.dovecot-wrapper:focus-within .dovecot-main img {
+.dovecot-wrapper:hover .dovecot-still img,
+.dovecot-wrapper:focus-within .dovecot-still img {
     display: none;
 }
 
@@ -153,12 +174,13 @@ body {
     z-index: 8;
 }
 
+/* Floor */
 .floor {
     position: absolute;
-    align-items: center;
     top: 85%;
-    max-width: 100%;
+    align-items: center;
     max-height: 15%;
+    max-width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 5;
@@ -168,6 +190,7 @@ body {
     width: 100%;
 }
 
+/* Flowers */
 .flowers {
     position: absolute;
     left: 15%;
@@ -179,10 +202,11 @@ body {
     height: 175px;
 }
 
+/* Garden */
 .garden {
     position: absolute;
-    bottom: 18%;
     left: 0;
+    bottom: 18%;
     max-width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -194,130 +218,165 @@ body {
     min-height: 150px;
 }
 
-.hillleft {
+/* Hills */
+.hill-1 {
     position: absolute;
-    bottom: 27%;
     left: 0;
+    bottom: 27%;
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 1;
 }
 
-.hillright {
-    position: absolute;
-    bottom: 20%;
-    right: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    z-index: 0;
-}
-
-.hillright .hillleft img {
+.hill-1 img {
     height: 25vh;
     min-height: 250px;
     width: auto;
 }
 
-.house, .house_open {
+.hill-2 {
     position: absolute;
-    left: 0;
-    top: 0;
+    right: 0;
+    bottom: 20%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 0;
 }
 
-.house-caption {
-    position: absolute;
-    display: none;
-    width: 150px;
-}
-
-.house img, .house_open img {
-    height: 220px;
+.hill-2 img {
+    height: 25vh;
+    min-height: 250px;
     width: auto;
 }
 
-.house-text {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    z-index: 9;
-    left: 10%;
-    bottom: 60%;
-}
-
+/* House */
 .house-wrapper {
     position: absolute;
     left: 2%;
     bottom: 24%;
-    height: 30px;
-    min-height: 200px;
+    height: 220px;
     z-index: 4;
 }
 
-.house_open img {
-    opacity: 0;
-}
-
-.house-wrapper:hover .house_open img,
-.house-wrapper:focus-within .house_open img {
-    opacity: 1;
-}
-
-.house-link-wrapper:hover .house-caption,
-.house-link-wrapper:focus-within .house-caption {
-    display: block;
-}
-
-.sky {
-    opacity: 0;
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-}
-
-.sun, .sun-blink {
+.house-still {
     position: absolute;
     left: 0;
     top: 0;
 }
 
-.sun img, .sun-blink img {
-    height: 18vh;
-    min-height: 120px;
+.house-still img, .house-hover img {
+    height: 220px;
+    width: auto;
 }
 
-.sun-blink img {
-    display: none;
-}
-
-.sun-caption {
+.house-hover {
     position: absolute;
-    left: 90px;
-    top: -30px;
-    width: 180px;
+    left: 0;
+    top: 0;
+}
+
+.house-hover img {
+    display: none
+}
+
+.house-caption {
+    position: absolute;
+    left: 0;
+    top: 0;
     z-index: 9;
+}
+
+.house-text {
+    position: absolute;
+    left: 17%;
+    bottom: 29%;
+    height: 220px;
+    width: 150px;
+    display: none;
+    z-index: 9;
+}
+
+.house-wrapper:hover .house-hover img,
+.house-wrapper:focus-within .house-hover img {
+    display: block;
+}
+
+.house-wrapper:hover ~ .house-text,
+.house-wrapper:focus-within ~ .house-caption {
+    display: block;
+}
+
+.house-wrapper:hover .house-still img,
+.house-wrapper:focus-within .house-still img {
     display: none;
 }
 
-.sun-text {
- border: none;
- padding: 0;
+/* Sky */
+.sky {
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 0;
+    overflow: hidden;
 }
 
+/* Sun */
 .sun-wrapper {
     position: absolute;
     left: 30%;
     top: 30%;
-    width: 120px;
     height: 120px;
+    width: 120px;
 }
 
-.sun-wrapper:hover .sun-blink img,
-.sun-wrapper:focus-within .sun-blink img,
+.sun-still {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.sun-still img {
+    height: 18vh;
+    min-height: 120px;
+}
+
+.sun-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.sun-hover img {
+    display: none;
+    height: 18vh;
+    min-height: 120px;
+}
+
+.sun-caption {
+    position: absolute;
+    left: 190px;
+    top: -30px;
+    display: none;
+    width: 180px;
+    z-index: 9;
+
+}
+
+.sun-text {
+    border: none;
+    padding: 0;
+}
+
+.sun-wrapper:hover .sun-hover img,
+.sun-wrapper:focus-within .sun-hover img {
+    display: block;
+}
+
 .sun-wrapper:hover .sun-caption,
 .sun-wrapper:focus-within .sun-caption {
     display: block;
 }
 
+/* Trees */
 .trees {
     position: absolute;
     right: 28%;
@@ -329,9 +388,10 @@ body {
     height: 300px;
 }
 
+/* Media Queries */
 @media screen and (max-width: 950px) {
     
-    html{
+    html {
         height: 100%;
         overflow-y: hidden;
     }
@@ -341,8 +401,8 @@ body {
     }
     
     .arches {
-        bottom: 7%;
         top: auto;
+        bottom: 7%;
         height: 800px;
     }
 
@@ -350,40 +410,33 @@ body {
         max-height: 130%;
     }
 
-    .cloud1 {
-        top: 10%;
+    .caption {
+        font-size: 20px;
+        max-width: 100px;
+    }
+    
+    .cloud-1 {
         left: 2%;
+        top: 10%;
     }
 
-    .cloud2 {
-        top: 14%;
-        right: 2%;
-    }
-
-    .cloud1 img, .cloud2 img {
+    .cloud-1 img, .cloud-2 img {
         height: 100px;
+    }
+
+    .cloud-2 {
+        right: 2%;
+        top: 14%;
     }
 
     .container {
         height: 90vh;
     }
 
-    .garden {
-        bottom: 17%;
+    .dovecot-text {
+        right: 200px;
     }
-
-    .house-wrapper {
-        bottom: 21%;
-    }
-
-    .house img, .house_open img {
-        height: 190px;
-    }
-
-    .sun-caption {
-        left: 52%
-    }
-
+    
     .flowers {
         left: 25%;
     }
@@ -392,9 +445,24 @@ body {
         height: 150px;
     }
 
+    .garden {
+        bottom: 17%;
+    }
+
+    .house-wrapper {
+        bottom: 19%;
+    }
+
+    .house-still img, .house-hover img {
+        height: 190px;
+    }
+
+    .sun-caption {
+        left: 120px
+    }
+
     .trees img {
         height: 250px;
     }
 
 }
-
