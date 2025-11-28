@@ -57,6 +57,7 @@
             top: 4%;
             flex: 1;
             height: 88vh;
+            min-width: 550px;
             background-image: url(../images/background.png);
             overflow: hidden;
         }
@@ -67,21 +68,38 @@
             z-index: 0;
         }
 
-        .desk {
+        .desk-still, .desk-hover {
             position: absolute;
-            bottom: 14%;
-            right: 5%;
+            left: 0;
+            top: 0;
+        }
+
+        .desk-still img, .desk-hover img {
+            height: 50vh;
+            min-height: 180px;
+            max-height: 450px;
+        }
+
+        .desk-hover img {
+            display: none;
+        }
+
+        .desk-wrapper {
+            position: absolute;
+            height: 50vh;
+            width: 150px;
+            bottom: 15%;
+            right: 0;
             z-index: 8;
         }
 
-        .desk img {
-            height: 50vh;
-            min-height: 180px;
+        .desk-wrapper:hover .desk-hover img, .desk-wrapper:focus-within .desk-hover img {
+            display: block
         }
 
-        .desk:hover img {
-            transform: rotate(-2deg)
-        }
+        .desk-wrapper:hover .desk-still img, .desk-wrapper:focus-within .desk-still img {
+            display: none
+        }        
 
         .floor img {
             width: 100%;
@@ -144,7 +162,7 @@
 
             background-image: url(../images/background.png);
             border: solid #eabb2d 3px;
-            color: black;
+            color: #3d3428;
             align-content: center;
         }
 
@@ -153,12 +171,16 @@
             font-family: 'itallics';
             font-size: 30px;
             text-align: center;
+            color: #3d3428;
+            padding: 10px;
         }
 
         .quote {
+            margin-top: -20px;
             font-size: 25px;
             font-family: 'title';
             text-align: right;
+            color: #3d3428;
         }
 
         .portrait-wrapper {
@@ -233,7 +255,7 @@
             font-family: "itallics";
         }
 
-        .post-summary {
+        .post-summary p {
             color: #3d3428;
             margin-bottom: 5%;
             font-size: 16px;
@@ -242,11 +264,11 @@
 
         .post-summary::first-letter {
             font-family: 'initial';
-            font-size: 80px;
+            font-size: 110px;
             line-height: 1;
             float: left;
             margin-right: 10px;
-            margin-bottom: 5px;
+            margin-bottom:-10px;
         }
 
         .post-tags {
@@ -264,70 +286,101 @@
             border: 1px solid #b23e28;
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 950px) {
+
+            .pagesplit {
+                width: 90%;
+                flex-direction: column;
+                gap: 25px;
+            }
 
             body {
                 background-size: 300px;
             }
             
-            .framework {
-                min-height: 450px;
-                width: 100%;
-                position: relative;
-                display: block;
-            }
-
-            .floor img {
-                width: 100%;
-            }
-            
-            .portrait-still img, .portrait-hover img {
-            height: 28vh;
-            min-height: 140px;
-            }
-
-            .portrait-caption {
-            left: 20vh;
-            max-width: 120px;
-            z-index: 2;
-            }
-
-            .portrait-text {
-                font-size: 22px;
-            }
-
-            .desk img {
-                height: 25vh;
-                min-height: 120px;
-            }
-
-            .chair-wrapper {
-                width: 25vh;
-                height: 25vh;
-                min-height: 140px;
-                bottom: 10%;
-            }
-        
-            .chair img, .chair-blink img {
-                height: 30vh;
-                min-height: 140px;
-            }
-
-            .pagesplit {
-                width: 80%;
-                flex-direction: column;
-                gap: 50px;
-            }
-
-            .post-content {
-                font-size: 10px;
+            .post {
+                width: 90%;
             }
 
             .post-title {
                 font-size: 50px;
             }
 
-            .post-image {
+            .framework {
+                min-height: 450px;
+                width: 100%;
+                position: relative;
+                display: block;
+                min-width: 1px;
+                margin-top: 25px;
+            }
+
+            .floor img {
+                width: 100%;
+            }
+            
+            .portrait-wrapper {
+                left: 4%;
+                top: 4%;
+            }
+
+            .portrait-still img, .portrait-hover img {
                 height: 200px;
+                min-height: 200px;
+                max-height: 100px;
+            }
+
+            .portrait-caption {
+                left: 110px;
+                max-width: 110px;
+                z-index: 2;
+            }
+
+            .portrait-text, .quote {
+                font-size: 16px;
+            }
+
+            .desk-still img, .desk-hover img {
+                height: 240px;
+            }
+
+            .desk-wrapper {
+                height: 200px;
+                width: 75px;
+                bottom: 70px;
+                right: 5%;
+            }
+
+            .chair-wrapper {
+                display:none;
+            }
+
+            .post {
+                width: 100%;
+            }
+            
+            .post-content {
+                font-size: 10px;
+            }
+
+            .post-title {
+                font-size: 35px;
+            }
+
+            .post-tags {
+                margin-top: 15px;
+            }
+
+            .post-summary p {
+                font-size: 12px;
+            }
+
+            .post-summary::first-letter {
+                font-size: 50px;
+            }
+
+            .post-image {
+                height: 150px;
+                width: 100%;
             }
         }
