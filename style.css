@@ -252,9 +252,9 @@ body {
 /* Hive */
 .hive-wrapper {
     position: absolute;
-    left: 48%;
-    bottom: 22%;
-    height: 120px;
+    left: 65%;
+    bottom: 24%;
+    height: 150px;
     width: 60px;
     z-index: 4;
 }
@@ -266,8 +266,7 @@ body {
 }
 
 .hive-still img {
-    height: 120px;
-    width: 98px;
+    height: 150px;
 }
 
 .hive-hover {
@@ -278,14 +277,13 @@ body {
 
 .hive-hover img {
     display: none;
-    height: 120px;
-    width: 98px;
+    height: 150px;
 }
 
 .hive-caption {
     position: absolute;
-    left: calc(55% - 290px);
-    bottom: calc(35% - 120px);
+    left: calc(65% + 110px);
+    bottom: calc(24% + 50px);
     display: none;
     width: 120px;
     z-index: 9;
@@ -456,7 +454,7 @@ body {
 /* Trees */
 .trees {
     position: absolute;
-    right: 28%;
+    right: 32%;
     bottom: 20%;
     z-index: 3;
 }
@@ -523,8 +521,13 @@ body {
         margin: none;
     }
 
+    .dovecot-wrapper {
+        right: 5%;
+    }
+
     .dovecot-text {
-        right: 200px;
+        right: 100px;
+        bottom: 0;
     }
     
     .flowers {
@@ -540,8 +543,8 @@ body {
     }
 
     .hive-wrapper {
-        bottom: 18%;
-        left: 40%;
+        bottom: 15%;
+        left: 68%;
     }
     
     .hive-hover img, .hive-still img {
@@ -551,8 +554,8 @@ body {
 
     .hive-caption {
     position: absolute;
-    left: calc(40% - 130px);
-    bottom: calc(18% - 50px);
+    left: calc(68% + 70px);
+    bottom: calc(18% + 50px);
     }
 
     .house-wrapper {
