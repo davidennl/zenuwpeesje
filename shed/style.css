@@ -166,6 +166,16 @@ p {
     width: 100%;
 }
 
+/* links */
+.portrait-hover a {
+    pointer-events: none;
+}
+
+.portrait-wrapper:hover .portrait-hover a,
+.portrait-wrapper:focus-within .portrait-hover a {
+    pointer-events: auto;
+}
+
 /* Portrait */
 .portrait-wrapper {
     position: absolute;

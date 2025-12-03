@@ -375,6 +375,19 @@ body {
     display: none;
 }
 
+/* links */
+.house-hover a,
+.hive-hover a {
+    pointer-events: none;
+}
+
+.house-wrapper:hover .house-hover a,
+.house-wrapper:focus-within .house-hover a,
+.hive-wrapper:hover .hive-hover a,
+.hive-wrapper:focus-within .hive-hover a {
+    pointer-events: auto;
+}
+
 /* Sky */
 .sky {
     max-height: 100%;
