@@ -39,6 +39,7 @@ body {
 
 .container {
     width: 40%;
+    min-width: 700px;
     height: 100%;
     margin: auto;
     padding: 2% 3% 2% 3%;
@@ -99,4 +100,11 @@ body {
 
 .wrapper {
     border-bottom: black 1px solid;
+}
+
+@media screen and (max-width: 1000px) {
+       .container {
+        width: 70%;
+        min-width: auto;
+       }
 }
