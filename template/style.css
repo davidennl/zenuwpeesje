@@ -108,3 +108,30 @@ body {
         min-width: auto;
        }
 }
+
+@media print {
+    .container {
+    height: auto !important;
+    min-height: 0;
+    margin: 5% 0;
+    width: 65%;
+    max-width: 65%;
+    min-width: 65%;
+    }
+  
+    .new-page {
+    page-break-before: always;
+    }
+    
+    .title, .subtitle, .poem, .caption {
+    page-break-inside: avoid;
+    }
+
+    .title, .subtitle {
+    margin-top: 0.5in;
+    }
+  
+    .subtitle {
+    page-break-after: avoid;
+    }
+}
