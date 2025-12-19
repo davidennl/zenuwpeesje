@@ -211,6 +211,7 @@ p {
 .portrait-caption {
     position: absolute;
     left: 24vh;
+    height: fit-content;
     align-content: center;
     background-image: url(../images/background.png);
     border: solid #eabb2d 3px;
@@ -261,7 +262,7 @@ p {
     overflow-y: auto;
 }
 
-/* Post */
+/* article */
 .post {
     background-color: #fff;
     border: 8px solid #2f7b94;
@@ -336,7 +337,7 @@ p {
     border-radius: 15px;
     color: #4a3f2e;
     font-size: 0.85em;
-    padding: 0.3em 0.5em;
+    padding: 0.5em 1em;
     cursor: pointer;
 
 }
