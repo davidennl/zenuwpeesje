@@ -110,12 +110,12 @@ p {
     text-align: left;
 }
 
-.post-summary::first-letter {
+.paragraph:first-letter {
     float: left;
-    font-family: 'initial';
+    font-family: 'initial', 'Courier New', Courier, monospace;
     font-size: 110px;
     line-height: 1;
-    margin-bottom: -10px;
+    margin-bottom: 0;
     margin-right: 10px;
 }
 
