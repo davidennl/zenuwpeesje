@@ -429,6 +429,14 @@ body {
     z-index: 9;
 }
 
+.house-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .house-wrapper:hover .house-hover img,
 .house-wrapper:focus-within .house-hover img {
     display: block;
@@ -602,6 +610,10 @@ body {
 
     .house-still img, .house-hover img {
         height: 190px;
+    }
+
+    .house-wrapper:hover .house-hover img {
+        display: none;
     }
 
     .sun-caption-wrapper {
