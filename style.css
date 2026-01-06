@@ -50,8 +50,6 @@ body {
     --dovecot-bottom: 18%;
     --house-left: 2%;
     --house-bottom: 24%;
-    --hive-left: 65%;
-    --hive-bottom: 24%;
     --sun-left: 30%;
     --sun-top: 30%;
     
@@ -320,67 +318,6 @@ body {
     display: block;
     z-index: 8;
 }
-
-/* Hive */
-.hive-wrapper {
-    position: absolute;
-    left: var(--hive-left);
-    bottom: var(--hive-bottom);
-    height: 150px;
-    width: 60px;
-    z-index: 4;
-}
-
-.hive-still {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.hive-still img {
-    height: 150px;
-}
-
-.hive-hover {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.hive-hover img {
-    display: none;
-    height: 150px;
-}
-
-.hive-caption-wrapper {
-    position: absolute;
-    left: calc(var(--hive-left) + 110px);
-    bottom: calc(var(--hive-bottom) + 50px);
-    width: 120px;
-    z-index: 9;
-}
-
-.hive-caption {
-    display: none;
-    padding: 10px 0;
-    font-size: 17px;
-}
-
-.hive-wrapper:hover .hive-hover img,
-.hive-wrapper:focus-within .hive-hover img {
-    display: block;
-}
-
-.hive-wrapper:hover + .hive-caption-wrapper .hive-caption,
-.hive-wrapper:focus-within + .hive-caption-wrapper .hive-caption {
-    display: block;
-    z-index: 8;
-}
-
-.hive-wrapper:hover .hive-still img,
-.hive-wrapper:focus-within .hive-still img {
-    display: none;
-} 
 
 /* House */
 .house-wrapper {

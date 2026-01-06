@@ -115,8 +115,8 @@ p {
     font-family: 'initial', 'Courier New', Courier, monospace;
     font-size: 110px;
     line-height: 1;
-    margin-bottom: 0;
-    margin-right: 10px;
+    margin-bottom: -0.3em;
+    margin-right: 0.1em;
 }
 
 .post-tags {
