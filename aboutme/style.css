@@ -31,7 +31,7 @@ a {
 body {
     background-image: url(../images/pattern.png);
     background-repeat: repeat;
-    background-size: 300px;
+    background-size: 500px;
     color: #2c2416;
     font-family: 'text';
     line-height: 1.4;
@@ -68,7 +68,6 @@ p {
 }
 
 /* Layout */
-
 .back-wrapper {
     position: fixed;
     right: 4%;
@@ -90,44 +89,75 @@ p {
     outline: solid #eabb2d 8px;
     height: fit-content;
     width: 300px;
-    height: 450px;
+    height: 480px;
     top: 40%;
     right: 65%;
     z-index: 2;
 }
 
-.text {
+/* texts */
+.text-padding {
     margin: 20px;
     width: 260px;
-    height: 410px;
+    height: 4300px;
 }
 
-.text p {
-    font-size: 14px;
+.text {
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.title {
+    text-align: center;
+    font-family: "title";
+    font-size: 26px;
+}
+
+.paragraph::first-letter {
+    float: left;
+    font-family: 'initial';
+    font-size: 110px;
+    line-height: 1;
+    margin-bottom: -10px;
+    margin-right: 10px;
 }
 
 .frame {
-    background: url(../images/background.png);
-    outline: #d34d00 8px solid;
     position: relative;
+    background: url(../images/background.png);
     overflow: hidden;
     width: 50%;
+    min-width: 800px;
     height: 50%;
+    min-height: 400px;
     margin: auto;
     top: 25%;
     z-index: 0;
 
-    --hive-left: 85%;
-    --hive-bottom: 2%;
+    --hive-left: 82%;
+    --hive-bottom: 4%;
+}
+
+.frame-outline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.frame-outline img {
+    width: 100%;
+    height: 100%;
 }
 
 .photo {
     outline: 8px solid #2f7b94;
     position: absolute;
-    bottom: 48%;
-    right: 18%;
-    height: 300px;
-    width: 220px;
+    top: 20%;
+    right: 20%;
+    height: 240px;
+    width: 180px;
     z-index: 2;
     overflow: hidden;
 }
@@ -162,7 +192,7 @@ p {
 
 .tree {
     position: absolute;
-    left: 25%;
+    left: 40%;
     bottom: 5%;
 }
 
@@ -182,7 +212,7 @@ p {
 
 /* Mobile Items */
 
-    .hive-wrapper {
+   .hive-wrapper {
         position: absolute;
         left: var(--hive-left);
         bottom: var(--hive-bottom);
@@ -224,6 +254,7 @@ p {
         display: none;
         padding: 10px 3px;
         font-size: 17px;
+        background: url(../images/background.png);
     }
 
     .hive-wrapper:hover .hive-hover img,
@@ -257,9 +288,8 @@ p {
         top: 0;
     }
 
-    .sun-still img {
-        height: 150px;
-        min-height: 120px;
+    .sun-still img, .sun-hover img {
+        height: 130px;
     }
 
     .sun-hover {
@@ -270,8 +300,6 @@ p {
 
     .sun-hover img {
         display: none;
-        height: 150px;
-        min-height: 120px;
     }
 
     .sun-wrapper:hover .sun-hover img,
@@ -283,32 +311,6 @@ p {
     .sun-wrapper:focus-within .sun-still img {
         display: none;
     }
-
-/* Text */
-.text p {
-    color: #3d3428;
-    font-size: 16px;
-    margin-bottom: 1.5em;
-    text-align: left;
-}
-
-.paragraph::first-letter {
-    float: left;
-    font-family: 'initial';
-    font-size: 110px;
-    line-height: 1;
-    margin-bottom: -10px;
-    margin-right: 10px;
-}
-
-.post-title {
-    color: #2c2416;
-    cursor: pointer;
-    font-family: 'title';
-    font-size: 60px;
-    margin: 0 0 -2% 0;
-    text-align: center;
-}
 
 /* Media Queries */
 @media (max-width: 950px) {
@@ -327,16 +329,16 @@ p {
     .back-wrapper img {
         height: 120px;
     }
-    
-    .post-summary p {
+        
+        .text {
         font-size: 14px;
     }
 
-    .post-summary::first-letter {
+    .paragraph::first-letter {
         font-size: 50px;
     }
 
-    .post-title {
-        font-size: 35px;
+    .title {
+        font-size: 25px;
     }
 }
