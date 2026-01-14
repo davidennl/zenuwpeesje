@@ -426,6 +426,11 @@ body {
     display: block;
 }
 
+.sun-wrapper:hover .sun-still img,
+.sun-wrapper:focus-within .sun-still img {
+    display: none;
+}
+
 .sun-wrapper:hover + .sun-caption-wrapper .sun-caption,
 .sun-wrapper:focus-within + .sun-caption-wrapper .sun-caption {
     display: block;
