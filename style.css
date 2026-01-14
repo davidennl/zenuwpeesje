@@ -366,8 +366,8 @@ body {
     display: block;
 }
 
-.house-wrapper:hover ~ .house-caption-wrapper,
-.house-wrapper:focus-within ~ .house-caption {
+.house-wrapper:hover .house-caption-wrapper,
+.house-wrapper:focus-within .house-caption {
     display: block;
 }
 
@@ -534,10 +534,6 @@ body {
 
     .house-still img, .house-hover img {
         height: 190px;
-    }
-
-    .house-wrapper:hover .house-hover img {
-        display: none;
     }
 
     .sun-caption-wrapper {
