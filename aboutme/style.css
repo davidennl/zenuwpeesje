@@ -347,6 +347,7 @@ p {
         margin: auto;
         height: fit-content;
         width: 70%;
+        max-width: 600px;
     }
 
     .frame {
@@ -358,7 +359,7 @@ p {
     }
         
     .text {
-        font-size: 18px;
+        font-size: 12px;
     }
 
     .paragraph::first-letter {
