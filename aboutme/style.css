@@ -106,8 +106,8 @@ p {
 /* texts */
 .text-padding {
     margin: 20px;
-    width: 260px;
-    height: 4300px;
+    width: auto;
+    height: auto;
 }
 
 .text {
@@ -344,9 +344,8 @@ p {
     }
 
     .caption-box {
-        display: block;
+        display: flex;
         position: static;
-        margin: auto;
         height: fit-content;
         width: 70%;
         max-width: 600px;
@@ -372,8 +371,8 @@ p {
         display: flex;
         flex-direction: column;
         height: 100%;
-        align-items: center;
-        justify-content: center;
+        align-content: center;
+        justify-items: center;
     }
 
     .title {
