@@ -351,8 +351,7 @@ p {
     float: left;
     font-family: 'initial', 'Courier New', Courier, monospace;
     font-size: 7em;
-    margin-top: 20px;;
-    padding: 25px 15px 25px 0;
+    margin: 20px 15px 0.3em 0;
     line-height: 0;
 }
 
